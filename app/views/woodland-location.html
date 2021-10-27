@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">Where is the woodland?</h1>
+
+      <form class="form" action="/multiple-species" method="post">
+
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="tree-location">
+    Give the address of the woodland and any specific details about its location.
+  </label>
+
+    <textarea class="govuk-textarea" id="tree-location" name="tree-location" rows="5" autocomplete="street-address"></textarea>
+  </div>
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

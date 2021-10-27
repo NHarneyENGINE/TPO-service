@@ -1,0 +1,59 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">What are you applying to protect?</h1>
+
+      <form class="form" action="/application-type-answer" method="post">
+
+        <div class="govuk-form-group">
+    <fieldset class="govuk-fieldset">
+
+      <div class="govuk-radios">
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="protect-what" name="protect-what" type="radio" value="Single tree on private land">
+          <label class="govuk-label govuk-radios__label" for="protect-what">
+            A single tree on private land
+          </label>
+        </div>
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="protect-what-2" name="protect-what" type="radio" value="More than one tree on private land">
+          <label class="govuk-label govuk-radios__label" for="protect-what-2">
+            More than one tree on private land
+          </label>
+        </div>
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="protect-what-3" name="protect-what" type="radio" value="Single tree on open land">
+          <label class="govuk-label govuk-radios__label" for="protect-what-3">
+            A single tree on open land
+          </label>
+        </div>
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="protect-what-4" name="protect-what" type="radio" value="Woodland">
+          <label class="govuk-label govuk-radios__label" for="protect-what-4">
+            A woodland
+          </label>
+        </div>
+      </div>
+
+    </fieldset>
+  </div>
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

@@ -1,0 +1,96 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+<script>
+  document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');
+</script>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">What types of tree are there?</h1>
+
+
+
+        <div data-module="moj-add-another">
+
+
+
+          <div id="more-detail-hint" class="govuk-hint">
+            If you need help identifying the tree species, read the <a href="https://www.woodlandtrust.org.uk/trees-woods-and-wildlife/british-trees/a-z-of-british-trees/"> Woodland Trust species guide</a>.
+          </div>
+    <form class="form" action="/protection-reason" method="post">
+
+      <div id="template">
+
+      <fieldset class="govuk-fieldset moj-add-another__item">
+
+        <legend class="govuk-fieldset__legend moj-add-another__title govuk-fieldset__legend--m">
+
+
+
+        </legend>
+
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-!-font-weight-bold" for="tree species">
+            Name of tree species
+          </label>
+
+          <input class="govuk-input" id="tree species" name="tree species" type="text" data-name="tree species" data-id="tree species">
+        </div>
+
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-!-font-weight-bold" for="tree[%index%][number]">
+            Number of trees of that species
+          </label>
+
+          <input class="govuk-input govuk-!-width-one-quarter" id="tree[0][number]" name="tree[0][number]" type="text" data-name="tree[%index%][number]" data-id="tree[%index%][number]">
+        </div>
+
+
+</fieldset>
+
+
+      <div class="moj-button-action">
+</div>
+
+<div id="placeholder">
+  <div id="template">
+   </div>
+</div>
+
+        <button class="govuk-button govuk-button--secondary moj-add-another__add-button govuk-!-margin-bottom-4" data-module="govuk-button" function="Add">
+          Add another tree species
+        </button>
+
+      </div>
+
+      <div class="moj-button-action">
+
+        <button class="govuk-button" data-module="govuk-button">
+          Continue
+        </button>
+
+      </div>
+
+    </form>
+
+  </div>
+
+
+
+
+
+
+    </div>
+  </div>
+
+{% endblock %}

@@ -1,0 +1,47 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">Upload evidence</h1>
+
+      <form class="form" action="/name" method="post">
+
+        <div class="govuk-form-group">
+
+
+  <div id="file-upload-1-hint" class="govuk-hint">
+    <p> You should upload a single docuemnt containing any evidence that will support your application for a Tree Preservation Order, this might include: </p>
+    <ul class="govuk-list govuk-list--bullet">
+    <li>maps of the area </li>
+    <li>photos of the area </li>
+    <li>statements about the value to the public </li>
+    <li>documents about the environmental importance </li>
+  </ul>
+  </div>
+
+  <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file" aria-describedby="file-upload-1-hint">
+</div>
+
+<button class="govuk-button" data-module="govuk-button">
+  Continue
+</button>
+
+
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}
